@@ -12,8 +12,8 @@ screen -t foo 0
 screen -t bar 1
 screen -t fizz 2
 screen -t buzz 3
-screen -t bag-and-tag 4
-screen -t deployment-zone 5
+screen -t baz 4
+screen -t faz 5
 screen -t mysql 6 mysql
 screen -t apache_log 7 tail -F /opt/local/apache2/logs/error_log
 screen -t mysql_log 8 tail -F /var/log/mysql/mysqld.log
