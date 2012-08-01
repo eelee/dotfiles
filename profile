@@ -1,4 +1,8 @@
 export PS1="\[\033[;36m\]\u\[\033[;32m\]@\h:\[\033[0:35m\]\w\[\033[1;33m\]>\[\033[0m\] "
+if [ "$TERM" == 'screen' ]; then
+  #echo -ne "\033kmeh\033\\"
+   export PS1='\[\033kmeh\033\\\]'${PS1}
+fi
 
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
 
@@ -15,6 +19,9 @@ export PATH=/Users/lee/.gem/ruby/1.8/bin:$PATH
 
 
 export SVN_EDITOR=vim
+export SYMFONY__DATABASE__HOSTNAME=127.0.0.1
+export SYMFONY__DATABASE__USERNAME=root
+export SYMFONY__DATABASE__PASSWORD=hello
 
 alias dnsflush="sudo dscacheutil -flushcache"
 alias sitesvn="svn info | egrep '^URL: (.*)' | sed 's/URL\:\ //'"
